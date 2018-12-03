@@ -1,0 +1,84 @@
+header {
+  background-color: #ffffff;
+}
+
+
+
+/* Change the link color on hover */
+li a:hover {
+    background-color: #555;
+    color: white;
+}
+
+footer {
+  background-color : #6ab8c4;
+  padding: 5px;
+  align-items: center;
+}
+
+a.fa-linkedin {
+  color: white;
+}
+
+footer div.socialMedia {
+  text-align: center;
+}
+
+@media screen and (min-width: 800px) {
+  footer {
+    display:grid;
+    /* removed grid-column-gap it causes a horizontal scroll
+    grid-column-gap: 10px;
+    */
+    grid-template-columns: 50% 50%;
+
+  }
+
+  footer nav {
+    /* align text to left when the screen is wider */
+    text-align:left;
+  }
+
+  /* "first-child" is what is known as a pseudo class,
+     this will apply ONLY to the first a tag under the nav element to make it
+     line up with the main Content
+     */
+  footer nav a:first-child {
+    margin-left:0px
+  }
+
+  footer div.socialMedia {
+    /* remove padding on social media element and have text align to the right */
+    padding:0px;
+    text-align:right;
+  }
+
+  footer div.socialMedia a:last-child {
+    margin-right:0px
+  }
+
+  section {
+  }
+
+}
+
+  @media screen and (max-width: 1023px) {
+    header div.header_search {
+      grid-column-start: 1;
+      grid-column-end: 4;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    header {
+      grid-template-columns: 25% 50% 25%;
+    }
+    header .header_logo1, header .header_logo2 {
+      grid-row-start: 1;
+      grid-row-end: 3;
+    }
+    header div.header_search {
+      text-align:right;
+      padding-right: 10px
+    }
+  }
