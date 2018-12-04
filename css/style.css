@@ -1,11 +1,48 @@
-header {
-  background-color: #ffffff;
+.navigation{
+  font-family: "Montserrat", sans-serif;
+  padding-top: 70px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-font-family: 'Montserrat', sans-serif;
+.header_img{
+position: absolute;
+bottom: 665px;
+left: 40px;
+}
+
+.headshot {
+  padding-top: 50px;
+}
+
+.about-container {
+  font-family: 'PT-Serif', serif;
+  margin: 0 auto;
+  float:inherit;
+  width: 35%;
+}
+
+.container {
+  margin: auto 0;
+  right: 20px;
+}
 
 .row {
   margin: 15px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul {
+  list-style-type: none;
+  margin:0;
+  padding:0;
+  background-color: white;
+  text-align: right;
 }
 
 ul li { display: inline-block}
@@ -40,65 +77,48 @@ a.fa-linkedin {
   color: white;
 }
 
+
+/* LIGHTBOX */
+
+.thumbnail {
+  max-width: 40%;
+}
+
+.italic { font-style: italic; }
+.small { font-size: 0.8em; }
+
+/** LIGHTBOX MARKUP **/
+
+.lightbox {
+	/** Default lightbox to hidden */
+	display: none;
+
+	/** Position and style */
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+}
+
+.lightbox img {
+	/** Pad the lightbox image */
+	max-width: 90%;
+	max-height: 80%;
+	margin-top: 2%;
+}
+
+.lightbox:target {
+	/** Remove default browser outline */
+	outline: none;
+
+	/** Unhide lightbox **/
+	display: block;
+}
+
 footer div.socialMedia {
   text-align: center;
 }
-
-@media screen and (min-width: 800px) {
-  footer {
-    display:grid;
-    /* removed grid-column-gap it causes a horizontal scroll
-    grid-column-gap: 10px;
-    */
-    grid-template-columns: 50% 50%;
-
-  }
-
-  footer nav {
-    /* align text to left when the screen is wider */
-    text-align:left;
-  }
-
-  /* "first-child" is what is known as a pseudo class,
-     this will apply ONLY to the first a tag under the nav element to make it
-     line up with the main Content
-     */
-  footer nav a:first-child {
-    margin-left:0px
-  }
-
-  footer div.socialMedia {
-    /* remove padding on social media element and have text align to the right */
-    padding:0px;
-    text-align:right;
-  }
-
-  footer div.socialMedia a:last-child {
-    margin-right:0px
-  }
-
-  section {
-  }
-
-}
-
-  @media screen and (max-width: 1023px) {
-    header div.header_search {
-      grid-column-start: 1;
-      grid-column-end: 4;
-    }
-  }
-
-  @media screen and (min-width: 1024px) {
-    header {
-      grid-template-columns: 25% 50% 25%;
-    }
-    header .header_logo1, header .header_logo2 {
-      grid-row-start: 1;
-      grid-row-end: 3;
-    }
-    header div.header_search {
-      text-align:right;
-      padding-right: 10px
-    }
-  }
